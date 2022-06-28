@@ -7,12 +7,12 @@ import Contact from './Contact';
 
 const Portfolio = () => {
   return (
-    <>
+    <main>
       <Top />
       <About />
       <Project />
       <Contact />
-    </>
+    </main>
   );
 };
 
