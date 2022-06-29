@@ -12,7 +12,9 @@ const About = () => {
         <li>
           <Link to='/about/skills'>SKILLS</Link>
         </li>
-        <li>CONTACT</li>
+        <li>
+          <Link to='/about/QnA'>Q&A</Link>
+        </li>
       </ul>
     </>
   );

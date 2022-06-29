@@ -26,7 +26,6 @@ const Portfolio = () => {
   };
 
   const scrollHandler = (index) => {
-    console.log('scrollHandler');
     tabRefs.current[index].scrollIntoView({
       behavior: 'smooth',
       block: 'start',

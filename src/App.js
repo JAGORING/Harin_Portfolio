@@ -7,6 +7,7 @@ import './App.css';
 import Info from './pages/Info';
 import Skills from './pages/Skills';
 import Portfolio from './pages/Portfolio';
+import QnA from './pages/QnA';
 
 const App = () => {
   function setScreenSize() {
@@ -25,6 +26,7 @@ const App = () => {
         </Route>
         <Route path='/about/info' component={Info} />
         <Route path='/about/skills' component={Skills} />
+        <Route path='/about/QnA' component={QnA} />
       </Switch>
     </>
   );

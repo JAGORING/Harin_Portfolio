@@ -1,27 +1,21 @@
 .header {
-  width: 100%;
+  width: auto;
   height: 5rem;
-  background-color: #044599;
-  padding: 0 10%;
+  background-color: transparent;
 }
 
 .header nav {
   height: 100%;
-}
-
-.header ul {
-  height: 100%;
   list-style: none;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin: 0 0.8em;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
-.header li {
-  margin: 0 1rem;
-  width: 5rem;
+.header Button {
+  margin: 0 0.3rem;
 }
 
 .header span {
