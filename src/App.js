@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
 import Info from './pages/Info';
 import Skills from './pages/Skills';
-import Header from './components/Header';
 import Portfolio from './pages/Portfolio';
 
 const App = () => {
-  const [sticky, setSticky] = useState('');
-
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
   useEffect(() => {
-    window.addEventListener('scroll', isSticky);
-    return () => {
-      window.removeEventListener('scroll', isSticky);
-    };
-  }, []);
-
-  const isSticky = () => {
-    const scrollTop = window.scrollY;
-    const stickyClassName = scrollTop >= 600 ? 'scrollDown' : '';
-    setSticky(stickyClassName);
-  };
+    setScreenSize();
+  });
 
   return (
-    <div>
-      {sticky && <Header className={sticky} />}
+    <>
       <Switch>
-        <Route path='/' exact component={Portfolio} />
+        <Route path='/' exact>
+          <Portfolio />
+        </Route>
         <Route path='/about/info' component={Info} />
         <Route path='/about/skills' component={Skills} />
       </Switch>
-    </div>
+    </>
   );
 };
 

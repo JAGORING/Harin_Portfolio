@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section>
+    <>
       <div>this is About page</div>
       <ul>
         <li>
@@ -14,7 +14,7 @@ const About = () => {
         </li>
         <li>CONTACT</li>
       </ul>
-    </section>
+    </>
   );
 };
 

@@ -2,18 +2,29 @@ import React from 'react';
 
 import styles from './Header.module.css';
 
-const Header = (props) => {
+import MenuItem from './UI/MenuItem';
+
+const Header = ({ className, onScroll }) => {
+  const navItems = ['TOP', 'ABOUT', 'PROJECT', 'CONTACT'];
+
+  const onScrollHandler = (index) => {
+    onScroll(index);
+  };
+
   return (
     <>
-      <header className={`${styles.header} ${props.className}`}>
+      <header className={`${styles.header} ${className}`}>
         <nav>
           <ul>
-            <li>
-              <div>TOP</div>
-            </li>
-            <li>
-              <div>ABOUT</div>
-            </li>
+            {navItems.map((item, index) => (
+              <MenuItem
+                key={index}
+                size='small'
+                onClick={() => onScrollHandler(index)}
+              >
+                {item}
+              </MenuItem>
+            ))}
           </ul>
         </nav>
       </header>

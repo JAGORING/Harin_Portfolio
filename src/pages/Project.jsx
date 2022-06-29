@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Project = () => {
-  return <section>Project 페이지</section>;
+  return <>Project 페이지</>;
 };
 
 export default Project;
