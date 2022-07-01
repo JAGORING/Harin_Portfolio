@@ -1,6 +1,5 @@
 import React from 'react';
 
-import styles from './Info.module.css';
 import BackToAbout from '../components/BackToAbout';
 
 const Info = () => {

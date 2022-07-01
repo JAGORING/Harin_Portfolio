@@ -5,11 +5,7 @@ import Button from './UI/Button';
 
 const BackToAbout = () => {
   let history = useHistory();
-  return (
-    <Button size='medium' onClick={() => history.goBack()}>
-      Back To About
-    </Button>
-  );
+  return <Button onClick={() => history.goBack()}>Back To About</Button>;
 };
 
 export default BackToAbout;

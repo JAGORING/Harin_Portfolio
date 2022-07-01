@@ -12,23 +12,3 @@ main > section:nth-child(n + 2) {
 section {
   height: calc(var(--vh, 1vh) * 100);
 }
-
-.scrollDown {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  padding: 20px 0;
-  animation: slide 0.3s;
-  box-shadow: 0 20px 30px rgba(#000, 0.2);
-  background: rgba(#f3f3f3, 0.5);
-}
-@keyframes slide {
-  from {
-    transform: translateY(-50px);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}

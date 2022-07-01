@@ -1,8 +1,21 @@
 import React from 'react';
 
-import styles from './Header.module.css';
+import styled from 'styled-components';
 
 import Button from './UI/Button';
+
+const HeaderContainer = styled.header`
+  width: auto;
+  height: 5rem;
+  background-color: transparent;
+
+  nav {
+    height: 100%;
+    display: flex;
+    padding: 0;
+    align-items: center;
+  }
+`;
 
 const Header = ({ className, onScroll }) => {
   const navItems = ['TOP', 'ABOUT', 'PROJECT', 'CONTACT'];
@@ -13,7 +26,7 @@ const Header = ({ className, onScroll }) => {
 
   return (
     <>
-      <header className={`${styles.header} ${className}`}>
+      <HeaderContainer className={`${className}`}>
         <nav>
           {navItems.map((item, index) => (
             <Button
@@ -25,7 +38,7 @@ const Header = ({ className, onScroll }) => {
             </Button>
           ))}
         </nav>
-      </header>
+      </HeaderContainer>
     </>
   );
 };

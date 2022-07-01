@@ -1,8 +1,14 @@
 import React from 'react';
-import styles from './Top.module.css';
+
+import Weather from '../components/Weather';
 
 const Top = (props) => {
-  return <div className={styles.top}>this is Top page</div>;
+  return (
+    <Weather>
+      <h1>안녕하세요 저는 이하린입니다</h1>
+      <h3>FRONT-END developer</h3>
+    </Weather>
+  );
 };
 
 export default Top;
