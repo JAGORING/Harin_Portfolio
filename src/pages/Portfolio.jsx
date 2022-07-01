@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 
 import styled, { keyframes, css } from 'styled-components';
 
-import Header from '../components/Header';
+import Header from '../components/Layout/Header';
 
 import Top from './Top';
 import About from './About';

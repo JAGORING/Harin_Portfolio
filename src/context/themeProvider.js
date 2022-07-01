@@ -4,7 +4,7 @@ import { ThemeProvider as StyledProvider } from 'styled-components';
 
 const ThemeContext = createContext({});
 
-const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
   const [ThemeMode, setThemeMode] = useState('light');
   const themeObject = ThemeMode === 'light' ? lightTheme : darkTheme;
 
@@ -15,7 +15,7 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-function useTheme() {
+export function useTheme() {
   const context = useContext(ThemeContext);
   const { ThemeMode, setThemeMode } = context;
 
@@ -29,5 +29,3 @@ function useTheme() {
 
   return [ThemeMode, toggleTheme];
 }
-
-export { ThemeProvider, useTheme };
