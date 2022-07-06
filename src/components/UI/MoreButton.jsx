@@ -25,7 +25,7 @@ const FullButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem;
+  padding: 0 3rem;
 
   &::after {
     content: '';
@@ -82,7 +82,7 @@ const IconContainer = styled.div`
   z-index: 2;
   width: 15%;
   height: 2em;
-  margin-left: 1em;
+  margin-left: 2.5em;
   transition: transform 0.5s ease;
 
   ${FullButton}:hover & {
