@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import Button from '../UI/Button';
+import MenuButton from '../UI/MenuButton';
 
 const HeaderContainer = styled.header`
   width: auto;
@@ -18,7 +18,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Header = ({ className, onScroll }) => {
-  const navItems = ['TOP', 'ABOUT', 'PROJECT', 'CONTACT'];
+  const navItems = ['ABOUT', 'PROJECT', 'CONTACT'];
 
   const onScrollHandler = (index) => {
     onScroll(index);
@@ -29,13 +29,13 @@ const Header = ({ className, onScroll }) => {
       <HeaderContainer className={`${className}`}>
         <nav>
           {navItems.map((item, index) => (
-            <Button
+            <MenuButton
               key={index}
               size='small'
               onClick={() => onScrollHandler(index)}
             >
               {item}
-            </Button>
+            </MenuButton>
           ))}
         </nav>
       </HeaderContainer>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const FullButton = styled.header`
+const FullButton = styled.button`
   background: #3d4c53;
   margin: 20px 0.3em;
   width: 180px;
@@ -43,8 +43,7 @@ const BtnText2 = styled.p`
   margin-right: -130px;
   color: #fff;
 `;
-
-const Button = ({ onClick, children }) => {
+const MenuButton = ({ onClick, children }) => {
   return (
     <FullButton onClick={onClick}>
       <BtnText>{children}</BtnText>
@@ -55,4 +54,4 @@ const Button = ({ onClick, children }) => {
   );
 };
 
-export default Button;
+export default MenuButton;

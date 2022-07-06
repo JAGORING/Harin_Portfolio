@@ -52,7 +52,7 @@ const Portfolio = () => {
     setSticky(stickyClassName);
   };
 
-  const scrollHandler = (index) => {
+  const scrollHandler = (index = 0) => {
     tabRefs.current[index].scrollIntoView({
       behavior: 'smooth',
       block: 'start',
@@ -63,16 +63,16 @@ const Portfolio = () => {
       {sticky && <MenuHeader sticky={sticky} onScroll={scrollHandler} />}
 
       <main>
-        <section ref={(el) => (tabRefs.current[0] = el)}>
-          <Top />
+        <section ref={(el) => (tabRefs.current[3] = el)}>
+          <Top onScroll={scrollHandler} />
         </section>
-        <section ref={(el) => (tabRefs.current[1] = el)}>
+        <section ref={(el) => (tabRefs.current[0] = el)}>
           <About />
         </section>
-        <section ref={(el) => (tabRefs.current[2] = el)}>
+        <section ref={(el) => (tabRefs.current[1] = el)}>
           <Project />
         </section>
-        <section ref={(el) => (tabRefs.current[3] = el)}>
+        <section ref={(el) => (tabRefs.current[2] = el)}>
           <Contact />
         </section>
       </main>

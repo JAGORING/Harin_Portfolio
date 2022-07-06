@@ -1,11 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Button from './UI/Button';
+import MenuButton from './UI/MenuButton';
 
 const BackToAbout = () => {
   let history = useHistory();
-  return <Button onClick={() => history.goBack()}>Back To About</Button>;
+  return (
+    <MenuButton onClick={() => history.goBack()}>Back To About</MenuButton>
+  );
 };
 
 export default BackToAbout;
