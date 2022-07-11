@@ -48,7 +48,7 @@ const Portfolio = () => {
   const isSticky = () => {
     let vh = window.innerHeight;
     const scrollTop = window.scrollY;
-    const stickyClassName = scrollTop >= vh ? 'scrollDown' : '';
+    const stickyClassName = scrollTop >= vh - 10 ? 'scrollDown' : '';
     setSticky(stickyClassName);
   };
 

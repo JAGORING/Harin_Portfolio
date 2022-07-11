@@ -1,12 +1,11 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import RinImg from '../../images/Harin.jpg';
 
 const Box = styled.div`
   width: 15em;
   height: 15em;
-  border-radius: 70%;
+  border-radius: 30%;
   overflow: hidden;
 `;
 const Profile = styled.img`
@@ -15,10 +14,10 @@ const Profile = styled.img`
   object-fit: cover;
 `;
 
-const CircleImg = () => {
+const CircleImg = ({ image }) => {
   return (
     <Box>
-      <Profile src={RinImg} />
+      <Profile src={image} />
     </Box>
   );
 };
