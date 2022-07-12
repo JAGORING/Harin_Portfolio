@@ -95,7 +95,45 @@ export const questionsAnswers = [
   },
   {
     id: 'q5',
-    question: '코딩에 흥미를 가지고 있나요?',
+    question: '어떤 개발자가 되고 싶나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
+  },
+];
+
+export const projectItems = [
+  {
+    id: 'p1',
+    img: 'https://picsum.photos/id/54/400/300',
+    title: '첫번째 프로젝트',
+    language: 'React',
+    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+  },
+  {
+    id: 'p2',
+    img: 'https://picsum.photos/id/54/400/300',
+    title: '두번째 프로젝트',
+    language: 'HTML/CSS, JavaScript',
+    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+  },
+  {
+    id: 'p3',
+    img: 'https://picsum.photos/id/54/400/300',
+    title: '세번째 프로젝트',
+    language: 'React',
+    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+  },
+  {
+    id: 'p4',
+    img: 'https://picsum.photos/id/54/400/300',
+    title: '네번째 프로젝트',
+    language: 'React',
+    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+  },
+  {
+    id: 'p5',
+    img: 'https://picsum.photos/id/54/400/300',
+    title: '다섯번째 프로젝트',
+    language: 'React',
+    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
   },
 ];

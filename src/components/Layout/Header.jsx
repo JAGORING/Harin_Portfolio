@@ -8,6 +8,7 @@ const HeaderContainer = styled.header`
   width: auto;
   height: 5rem;
   background-color: transparent;
+  z-index: 10;
 
   nav {
     height: 100%;
