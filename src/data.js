@@ -1,3 +1,29 @@
+export const ListItems = [
+  { to: '/about/info', label: '자기소개' },
+  { to: '/about/skills', label: 'SKILLS' },
+  { to: '/about/QnA', label: 'Q&A' },
+];
+
+export const point = [
+  {
+    title: 'Fast',
+    content: 'Fast load times and lag free interaction, my highest priority.',
+  },
+  {
+    title: 'Responsive',
+    content: 'My layouts will work on any device, big or small.',
+  },
+  {
+    title: 'Intuitive',
+    content: 'Strong preference for easy to use, intuitive UX/UI.',
+  },
+  {
+    title: 'Dynamic',
+    content:
+      'Websites do nat have to be static, I love making pages come to life.',
+  },
+];
+
 export const skills = [
   { good: true, label: 'HTML/CSS' },
   { good: true, label: 'JavaScript' },
@@ -42,5 +68,34 @@ export const skillContents = [
   {
     title: 'Git/GitHub',
     contents: ['branch를 사용하여 분기점을 만들 수 있습니다.'],
+  },
+];
+
+export const questionsAnswers = [
+  {
+    id: 'q1',
+    question: '자신에 대해 자유롭게 표현한다면?',
+    answer: '이러쿵 저러쿵 저러쿵 이러쿵',
+  },
+  {
+    id: 'q2',
+    question: '프론트엔드에 흥미를 가지게 된 계기가 있나요?',
+    answer: '이러쿵 저러쿵 저러쿵 이러쿵',
+  },
+  {
+    id: 'q3',
+    question:
+      '프론트엔드 개발의 기술을 향상시키기 위한 본인의 학습 방법에 대해서 얘기해주세요!',
+    answer: '이러쿵 저러쿵 저러쿵 이러쿵',
+  },
+  {
+    id: 'q4',
+    question: '개발에 있어서 제일 중요하다고 생각하는 점이 있나요?',
+    answer: '이러쿵 저러쿵 저러쿵 이러쿵',
+  },
+  {
+    id: 'q5',
+    question: '코딩에 흥미를 가지고 있나요?',
+    answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
 ];

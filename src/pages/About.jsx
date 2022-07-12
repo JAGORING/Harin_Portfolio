@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { point, ListItems } from '../data';
+
 import CircleImg from '../components/UI/CircleImg';
 import LinkList from '../components/LinkList';
 import Point from '../components/Point';
@@ -46,30 +48,24 @@ const Wrap = styled.div`
 `;
 const Wrap2 = styled(Wrap)`
   width: 80%;
-  margin-top: 3em;
+  margin-top: 4em;
 `;
 
 const About = () => {
-  const ListItems = [
-    { id: 1, to: '/about/info', label: '자기소개' },
-    { id: 2, to: '/about/skills', label: 'SKILLS' },
-    { id: 3, to: '/about/QnA', label: 'Q&A' },
-  ];
   return (
     <AboutRin>
       <Wrap>
         <CircleImg image={RinImg} />
         <LinkBox>
-          {ListItems.map((item) => (
-            <LinkList key={item.id} item={item} />
+          {ListItems.map((item, index) => (
+            <LinkList key={index} item={item} />
           ))}
         </LinkBox>
       </Wrap>
       <Wrap2>
-        <Point>이런이런 저런저런 점</Point>
-        <Point>이런이런 저런저런 점</Point>
-        <Point>이런이런 저런저런 점</Point>
-        <Point>이런이런 저런저런 점</Point>
+        {point.map((item, index) => (
+          <Point key={index} image={RinImg} point={item} />
+        ))}
       </Wrap2>
     </AboutRin>
   );
