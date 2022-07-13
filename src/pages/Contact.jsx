@@ -1,7 +1,13 @@
 import React from 'react';
 
+import Email from '../components/Email';
+
 const Contact = () => {
-  return <>CONTACT 페이지</>;
+  return (
+    <>
+      <Email />
+    </>
+  );
 };
 
 export default Contact;
