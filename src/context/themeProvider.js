@@ -5,12 +5,13 @@ import { ThemeProvider as StyledProvider } from 'styled-components';
 const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }) => {
-  const [ThemeMode, setThemeMode] = useState('light');
-  const themeObject = ThemeMode === 'light' ? lightTheme : darkTheme;
+  const LocalTheme = window.localStorage.getItem('theme') || 'light';
+  const [ThemeMode, setThemeMode] = useState(LocalTheme);
+  const themeStyles = ThemeMode === 'light' ? lightTheme : darkTheme;
 
   return (
     <ThemeContext.Provider value={{ ThemeMode, setThemeMode }}>
-      <StyledProvider theme={themeObject}>{children}</StyledProvider>
+      <StyledProvider theme={themeStyles}>{children}</StyledProvider>
     </ThemeContext.Provider>
   );
 };
@@ -22,10 +23,12 @@ export function useTheme() {
   const toggleTheme = useCallback(() => {
     if (ThemeMode === 'light') {
       setThemeMode('dark');
+      window.localStorage.setItem('theme', 'dark');
     } else {
       setThemeMode('light');
+      window.localStorage.setItem('theme', 'light');
     }
-  }, [ThemeMode]);
+  }, [ThemeMode, setThemeMode]);
 
   return [ThemeMode, toggleTheme];
 }

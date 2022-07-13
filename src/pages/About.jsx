@@ -8,9 +8,10 @@ import LinkList from '../components/LinkList';
 import Point from '../components/Point';
 import RinImg from '../images/Harin.jpg';
 
-const AboutRin = styled.section`
+const AboutRin = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
 `;
@@ -18,27 +19,13 @@ const AboutRin = styled.section`
 const LinkBox = styled.div`
   margin-left: 6em;
   position: relative;
-  border: 0.5em solid #133e96;
+  border: 0.3em solid
+    ${(props) => (props.theme === 'light' ? '#66BFBF' : '#F7A91A')};
   padding: 4em 6em;
   border-radius: 0.3em;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: 46px solid transparent;
-    border-right-color: #133e96;
-    border-left: 0;
-    border-top: 0;
-    margin-top: -23px;
-    margin-left: -46px;
-  }
 `;
 
 const Wrap = styled.div`
@@ -51,20 +38,20 @@ const Wrap2 = styled(Wrap)`
   margin-top: 4em;
 `;
 
-const About = () => {
+const About = ({ theme }) => {
   return (
     <AboutRin>
       <Wrap>
         <CircleImg image={RinImg} />
-        <LinkBox>
+        <LinkBox theme={theme}>
           {ListItems.map((item, index) => (
-            <LinkList key={index} item={item} />
+            <LinkList key={index} item={item} theme={theme} />
           ))}
         </LinkBox>
       </Wrap>
       <Wrap2>
         {point.map((item, index) => (
-          <Point key={index} image={RinImg} point={item} />
+          <Point key={index} image={RinImg} point={item} theme={theme} />
         ))}
       </Wrap2>
     </AboutRin>

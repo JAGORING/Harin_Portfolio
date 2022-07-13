@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTheme } from '../../context/themeProvider';
 
 const SkillBox = styled.li`
-  background-color: ${(props) => (props.yellow ? '#F3C568' : '#D8D6D1')};
+  background-color: ${(props) =>
+    props.yellow
+      ? props.theme === 'light'
+        ? '#66BFBF'
+        : '#F7A91A'
+      : '#D8D6D1'};
+  color: #222831;
   padding: 0.5em 1.2em;
   margin: 0 0.8em 0.2em 0;
   border-radius: 8px;
@@ -10,7 +17,13 @@ const SkillBox = styled.li`
 `;
 
 const SkillItem = ({ children, good }) => {
-  return <SkillBox yellow={good}>{children}</SkillBox>;
+  const ThemeMode = useTheme();
+
+  return (
+    <SkillBox yellow={good} theme={ThemeMode[0]}>
+      {children}
+    </SkillBox>
+  );
 };
 
 export default SkillItem;

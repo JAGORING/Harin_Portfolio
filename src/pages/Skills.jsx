@@ -2,7 +2,7 @@ import React from 'react';
 import { skills, skillContents } from '../data';
 
 import styled from 'styled-components';
-import BackToAbout from '../components/BackToAbout';
+import BackToAbout from '../components/Button/BackToAbout';
 import SkillItem from '../components/Skill/SkillItem';
 import SkillContent from '../components/Skill/SkillContent';
 

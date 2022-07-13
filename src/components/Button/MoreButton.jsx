@@ -17,9 +17,9 @@ const FullButton = styled.button`
   min-width: 16em;
   min-height: 4.5em;
   border-radius: 4.5em;
-  color: #fff;
+  color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.3);
+  background: transparent;
   overflow: hidden;
   cursor: pointer;
   display: flex;
@@ -37,7 +37,7 @@ const FullButton = styled.button`
     border-radius: 4.5em;
     z-index: 1;
     transition: transform 0.5s ease;
-    background: blue;
+    background: ${(props) => (props.theme === 'light' ? '#66BFBF' : '#F7A91A')};
   }
 
   &:hover {
@@ -94,10 +94,10 @@ const Text = styled.span`
   z-index: 2;
 `;
 
-const MoreButton = ({ onClick, children }) => {
+const MoreButton = ({ onClick, children, theme }) => {
   return (
     <BtnContainer>
-      <FullButton onClick={onClick}>
+      <FullButton theme={theme} onClick={onClick}>
         <Text>{children}</Text>
         <IconContainer>
           <Icon1>

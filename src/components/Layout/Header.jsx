@@ -1,11 +1,10 @@
 import React from 'react';
 
 import styled from 'styled-components';
-
-import MenuButton from '../UI/MenuButton';
+import MenuButton from '../Button/MenuButton';
 
 const HeaderContainer = styled.header`
-  width: auto;
+  width: 100%;
   height: 5rem;
   background-color: transparent;
   z-index: 10;

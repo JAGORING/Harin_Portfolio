@@ -1,13 +1,24 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import styled, { keyframes, css } from 'styled-components';
+import { useTheme } from '../context/themeProvider';
 
 import Header from '../components/Layout/Header';
+import ThemeToggle from '../components/Button/ThemeToggle';
 
 import Top from './Top';
 import About from './About';
 import Project from './Project';
 import Contact from './Contact';
+
+const Main = styled.main`
+  section {
+    &:nth-child(2) {
+      background: ${(props) =>
+        props.theme === 'light' ? '#f5f5f5' : '#0B0B0B'};
+    }
+  }
+`;
 
 const slide = keyframes`
   from {
@@ -30,11 +41,12 @@ const MenuHeader = styled(Header)`
       padding: 20px 0;
       animation: ${slide} 0.3s;
       box-shadow: 0 20px 30px rgba(#000, 0.2);
-      background: rgba(#f3f3f3, 0.5);
     `};
 `;
 
 const Portfolio = () => {
+  const [ThemeMode, toggleTheme] = useTheme();
+
   const [sticky, setSticky] = useState('');
   const tabRefs = useRef([]);
 
@@ -61,21 +73,23 @@ const Portfolio = () => {
   return (
     <>
       {sticky && <MenuHeader sticky={sticky} onScroll={scrollHandler} />}
-
-      <main>
+      <ThemeToggle toggle={toggleTheme} mode={ThemeMode} theme={ThemeMode}>
+        DarkMode
+      </ThemeToggle>
+      <Main theme={ThemeMode}>
         <section ref={(el) => (tabRefs.current[3] = el)}>
-          <Top onScroll={scrollHandler} />
+          <Top onScroll={scrollHandler} theme={ThemeMode} />
         </section>
         <section ref={(el) => (tabRefs.current[0] = el)}>
-          <About />
+          <About theme={ThemeMode} />
         </section>
         <section ref={(el) => (tabRefs.current[1] = el)}>
-          <Project />
+          <Project theme={ThemeMode} />
         </section>
         <section ref={(el) => (tabRefs.current[2] = el)}>
-          <Contact />
+          <Contact theme={ThemeMode} />
         </section>
-      </main>
+      </Main>
     </>
   );
 };

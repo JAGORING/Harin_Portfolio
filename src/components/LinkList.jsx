@@ -18,18 +18,26 @@ const LinkDiv = styled(Link)`
     margin-right: 0em;
   }
   letter-spacing: 0.16em;
-  color: #363636;
-  background: linear-gradient(to right, #363636 0%, #363636 100%);
+  color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
+  background: linear-gradient(
+    to right,
+    ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')} 0%,
+    ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')} 100%
+  );
   background-repeat: no-repeat;
   background-position: left 100%;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
   background-size: 0 6%;
   &:hover {
     background-size: 100% 6%;
   }
 `;
-const LinkList = ({ item }) => {
-  return <LinkDiv to={item.to}>{item.label}</LinkDiv>;
+const LinkList = ({ item, theme }) => {
+  return (
+    <LinkDiv to={item.to} theme={theme}>
+      {item.label}
+    </LinkDiv>
+  );
 };
 
 export default LinkList;

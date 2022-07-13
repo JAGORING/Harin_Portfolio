@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Box = styled.div`
-  width: 15em;
-  height: 15em;
+  width: ${(props) => (props.size === 'large' ? '18em' : '13em')};
+  height: ${(props) => (props.size === 'large' ? '16em' : '13em')};
   border-radius: 30%;
   overflow: hidden;
 `;
@@ -14,9 +14,9 @@ const Profile = styled.img`
   object-fit: cover;
 `;
 
-const CircleImg = ({ image }) => {
+const CircleImg = ({ image, size }) => {
   return (
-    <Box>
+    <Box size={size}>
       <Profile src={image} />
     </Box>
   );

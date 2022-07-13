@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useTheme } from '../../context/themeProvider';
 import styled from 'styled-components';
 
 const SkillBox = styled.div`
@@ -17,6 +17,7 @@ const SkillBox = styled.div`
     font-weight: bold;
   }
   .contents {
+    color: ${(props) => (props.theme === 'light' ? '#393E46' : '#c8c8c8')};
     margin-top: 1.3rem;
     line-height: 150%;
     &__content {
@@ -25,8 +26,9 @@ const SkillBox = styled.div`
   }
 `;
 const SkillContent = ({ skill }) => {
+  const ThemeMode = useTheme();
   return (
-    <SkillBox>
+    <SkillBox theme={ThemeMode[0]}>
       <div className='name'>{skill.title}</div>
       <div className='contents'>
         {skill.contents.map((content, idx) => (

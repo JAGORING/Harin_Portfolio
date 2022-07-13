@@ -1,19 +1,29 @@
 import styled from 'styled-components';
+import { useTheme } from '../../context/themeProvider';
 
 import { AiFillCaretDown } from 'react-icons/ai';
 
 const AccordionWrapper = styled.div`
   border-bottom: 1px solid grey;
   padding-top: 1rem;
-  * {
-    font-size: 18px;
-  }
 `;
 
-const AccordionHeader = styled.button`
-  font-family: inherit;
-  cursor: pointer;
+const AccordionHeading = styled.span`
+  margin: 0;
+  font-size: 1.1em;
+`;
 
+const AccordionMessage = styled.p`
+  color: gray;
+  line-height: 1.5;
+  white-space: pre-line;
+  margin: 0.5rem 0 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-out 0.2s;
+`;
+const AccordionHeader = styled.button`
+  cursor: pointer;
   border: none;
   background: none;
   padding: 0;
@@ -23,41 +33,32 @@ const AccordionHeader = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
 
-  span {
-    font-size: 14px;
-  }
   .icon {
+    font-size: 1.3em; 
     transition: transform ease 0.3s;
   }
 
-  color: black;
-  transition: color ease 0.1s;
+  transition: color ease 0.3s;
 
   &:hover {
-    color: red;
+    color: ${(props) => (props.theme === 'light' ? '#00ADB5' : '#F7A91A')};
   }
   &:focus {
     outline: none;
-    color: red;
+    color: ${(props) => (props.theme === 'light' ? '#00ADB5' : '#F7A91A')};
+  }
+
+  &{AccordionMessage} {
+    color: ${(props) => (props.theme === 'light' ? '#393E46' : '#c8c8c8')};
+
   }
 `;
 
-const AccordionHeading = styled.span`
-  margin: 0 0 0.6em;
-`;
-
-const AccordionMessage = styled.p`
-  color: gray;
-  line-height: 1.5;
-  white-space: pre-line;
-  margin: 8px 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height ease-out 0.2s;
-`;
-
 const AccordionItem = ({ qna, onHeaderClick }) => {
+  const ThemeMode = useTheme();
+
   return (
     <AccordionWrapper>
       <AccordionHeader
@@ -65,6 +66,7 @@ const AccordionItem = ({ qna, onHeaderClick }) => {
         onClick={() => {
           onHeaderClick(qna);
         }}
+        theme={ThemeMode[0]}
       >
         <AccordionHeading>{qna.question}</AccordionHeading>
         <AiFillCaretDown className='icon' />
