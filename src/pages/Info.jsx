@@ -56,12 +56,14 @@ const InfoMe = styled.div`
   display: flex;
   flex-direction: column;
   ${media.medium`
-  width: 70%;
-
+    width: 70%;
   `};
   ${media.small`
-  width: 85%;
+    width: 85%;
   `};
+  h3 {
+    margin-bottom: 1.2rem;
+  }
 `;
 const Info = () => {
   return (

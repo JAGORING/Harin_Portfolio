@@ -1,3 +1,6 @@
+import { TbListDetails, TbGrowth, TbSettings } from 'react-icons/tb';
+import { FaUserFriends } from 'react-icons/fa';
+
 export const AboutItems = [
   { to: '/about/info', label: 'ABOUT ME' },
   { to: '/about/skills', label: 'SKILLS' },
@@ -6,20 +9,24 @@ export const AboutItems = [
 
 export const point = [
   {
-    title: '속도',
-    content: '하나의 사이트가 ',
+    icon_name: <TbListDetails className='icon' />,
+    title: '디테일',
+    content: '최고의 사용자 경험을 위해 사소한 디테일까지 신경쓰기',
   },
   {
-    title: '우선순위',
-    content: '약속된 시간 내에 완성하기 위해 ',
+    icon_name: <TbSettings className='icon' />,
+    title: '유지보수',
+    content: '수정하기 쉽고 재사용하기 좋은 코드를 짜는 것을 목표로!',
   },
   {
+    icon_name: <FaUserFriends className='icon' />,
     title: '동료',
-    content: '혼자가 아닌 동료와 소통하고 더 좋은 방향으로 함께 나아가기',
+    content: '신뢰할 수 있는 동료가 되어 더 좋은 방향으로 함께 나아가기',
   },
   {
+    icon_name: <TbGrowth className='icon' />,
     title: '성장',
-    content: '스스로 문제를 정의하고 해결하는 과정',
+    content: '스스로 문제를 정의하고 해결하는 과정을 통한 끊임없는 성장',
   },
 ];
 
@@ -74,28 +81,23 @@ export const skillContents = [
 
 export const questionsAnswers = [
   {
-    id: 'q1',
     question: '자신에 대해 자유롭게 표현한다면?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
-    id: 'q2',
     question: '프론트엔드에 흥미를 가지게 된 계기가 있나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
-    id: 'q3',
     question:
       '프론트엔드 개발의 기술을 향상시키기 위한 본인의 학습 방법에 대해서 얘기해주세요!',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
-    id: 'q4',
     question: '개발에 있어서 제일 중요하다고 생각하는 점이 있나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
-    id: 'q5',
     question: '어떤 개발자가 되고 싶나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
