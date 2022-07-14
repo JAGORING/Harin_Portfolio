@@ -8,6 +8,7 @@ import ProjectCard from '../components/Project/ProjectCard';
 const ProjectRin = styled.div`
   margin: auto 5rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -64,7 +65,7 @@ const Project = ({ theme }) => {
           }}
         >
           {projectItems.map((item) => (
-            <ProjectCard key={item.id} item={item} theme={theme} />
+            <ProjectCard key={item.id} item={item} />
           ))}
         </Carousel>
       </ProjectRin>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { useTheme } from '../context/themeProvider';
 import styled from 'styled-components';
 
 import BackToAbout from '../components/Button/BackToAbout';
@@ -14,13 +13,12 @@ const Wrap = styled.div`
 `;
 const InfoBox = styled.div`
   margin-left: 6em;
-  border: 0.3em solid
-    ${(props) => (props.theme === 'light' ? '#66BFBF' : '#F7A91A')};
+  border: 0.3em solid ${(props) => props.theme.BaseColor};
   padding: 3em 4.5em;
   border-radius: 0.3em;
 
   a {
-    color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
+    color: ${(props) => props.theme.textColor};
     text-decoration: none;
   }
 `;
@@ -46,13 +44,12 @@ const InfoMe = styled.div`
   flex-direction: column;
 `;
 const Info = () => {
-  const ThemeMode = useTheme();
   return (
     <section>
       <BackToAbout />
       <Wrap>
         <CircleImg image={RinImg} size='large' />
-        <InfoBox theme={ThemeMode[0]}>
+        <InfoBox>
           <InfoUl>
             <li>
               <span>BIRTHDAY</span>1999-01-15

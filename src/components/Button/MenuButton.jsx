@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { useTheme } from '../../context/themeProvider';
 import styled from 'styled-components';
 
 const FullButton = styled.button`
-  background: ${(props) => (props.theme === 'light' ? '#393E46' : '#393E46')};
+  background: #393e46;
   margin: 20px 0.3em;
   border: none;
   width: 10rem;
@@ -30,7 +29,7 @@ const BtnTwo = styled.div`
   height: 100px;
   margin-top: -95px;
   padding-top: 3px;
-  background: ${(props) => (props.theme === 'light' ? '#66BFBF' : '#F7A91A')};
+  background: ${(props) => props.theme.BaseColor};
   left: -250px;
   transition: 0.3s;
   ${FullButton}:hover & {
@@ -48,12 +47,10 @@ const BtnText2 = styled.p`
   margin-right: -130px;
 `;
 const MenuButton = ({ onClick, children }) => {
-  const ThemeMode = useTheme();
-
   return (
-    <FullButton theme={ThemeMode[0]} onClick={onClick}>
+    <FullButton onClick={onClick}>
       <BtnText>{children}</BtnText>
-      <BtnTwo theme={ThemeMode[0]}>
+      <BtnTwo>
         <BtnText2>GO!</BtnText2>
       </BtnTwo>
     </FullButton>

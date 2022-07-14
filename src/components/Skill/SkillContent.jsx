@@ -1,34 +1,35 @@
 import React from 'react';
-import { useTheme } from '../../context/themeProvider';
 import styled from 'styled-components';
 
 const SkillBox = styled.div`
+  width: 100%;
+  padding: 1.3rem 2rem;
   border-radius: 2rem;
-  margin: 2rem 2rem 0;
-  padding: 1.5rem 2rem;
+  margin: 1.6rem 2rem 0;
   position: relative;
   .name {
-    transform: rotate(-3deg);
+    transform: rotate(-5deg);
     position: absolute;
     left: -1.5rem;
     top: -1.5rem;
     padding: 0.5rem 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
   }
   .contents {
-    color: ${(props) => (props.theme === 'light' ? '#393E46' : '#c8c8c8')};
-    margin-top: 1.3rem;
-    line-height: 150%;
+    padding: 1.5rem 2rem;
     &__content {
       line-height: 1.6rem;
     }
+    border-right: 1px dashed ${(props) => props.theme.textColor};
+    border-bottom: 1px dashed ${(props) => props.theme.textColor};
+    border-right-width: 50%;
+    border-bottom-width: 50%;
   }
 `;
 const SkillContent = ({ skill }) => {
-  const ThemeMode = useTheme();
   return (
-    <SkillBox theme={ThemeMode[0]}>
+    <SkillBox>
       <div className='name'>{skill.title}</div>
       <div className='contents'>
         {skill.contents.map((content, idx) => (

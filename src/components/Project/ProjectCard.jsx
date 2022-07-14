@@ -4,9 +4,8 @@ import styled from 'styled-components';
 import { SiNotion, SiGithub } from 'react-icons/si';
 
 const Card = styled.div`
-  background: ${(props) => (props.theme === 'light' ? '#EEEEEE' : '#222831')};
-  box-shadow: ${(props) => (props.theme === 'light' ? '#c8c8c8' : '#393E46')}
-    0px 5px 20px 0px;
+  background: ${(props) => props.theme.bgColor};
+  box-shadow: ${(props) => props.theme.shadowColor} 0px 5px 20px 0px;
   width: 80%;
   border-radius: 0.6em;
   margin-bottom: 1em;
@@ -25,7 +24,7 @@ const Card = styled.div`
 const CardBody = styled.div`
   padding: 1.2em;
   h2 {
-    color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
+    color: ${(props) => props.theme.textColor};
     margin-top: -0.2em;
     letter-spacing: 0.03em;
     font-size: 1.3em;
@@ -38,11 +37,11 @@ const CardBody = styled.div`
     text-transform: uppercase;
   }
   p {
-    color: ${(props) => (props.theme === 'light' ? '#393E46' : '#c8c8c8')};
+    color: ${(props) => !props.theme.shadowColor};
   }
   .icon {
-    font-size: 1.8rem;
-    color: ${(props) => (props.theme === 'light' ? '#222831' : '#c8c8c8')};
+    font-size: 1.6rem;
+    color: ${(props) => props.theme.textColor};
   }
 `;
 const BtnGroup = styled.div`
@@ -62,11 +61,11 @@ const BtnGroup = styled.div`
   }
 `;
 
-const ProjectCard = ({ item, theme }) => {
+const ProjectCard = ({ item }) => {
   return (
-    <Card theme={theme}>
+    <Card>
       <img src={item.img} alt={`${item.title}`} />
-      <CardBody theme={theme}>
+      <CardBody>
         <h2>{item.title}</h2>
         <h5>{item.language}</h5>
         <p>{item.content}</p>

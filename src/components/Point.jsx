@@ -3,12 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PointBox = styled.div`
-  width: 23%;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
+  &:nth-child(n + 2) {
+    margin-left: 1rem;
+  }
   .image {
     width: 80px;
     margin-bottom: 1rem;
@@ -18,12 +19,12 @@ const PointBox = styled.div`
     margin: 0;
   }
   p {
-    color: ${(props) => (props.theme === 'light' ? '#6C6753' : '#c8c8c8')};
+    color: ${(props) => !props.theme.shadowColor};
   }
 `;
-const Point = ({ point, image, theme }) => {
+const Point = ({ point, image }) => {
   return (
-    <PointBox theme={theme}>
+    <PointBox>
       <img className='image' src={image} alt='중요한 점 아이콘' />
       <h3>{point.title}</h3>
       <p>{point.content}</p>

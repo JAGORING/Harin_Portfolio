@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useTheme } from '../../context/themeProvider';
 
 import { AiFillCaretDown } from 'react-icons/ai';
 
@@ -33,7 +32,7 @@ const AccordionHeader = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
+  color: ${(props) => props.theme.textColor};
 
   .icon {
     font-size: 1.3em; 
@@ -43,22 +42,20 @@ const AccordionHeader = styled.button`
   transition: color ease 0.3s;
 
   &:hover {
-    color: ${(props) => (props.theme === 'light' ? '#00ADB5' : '#F7A91A')};
+    color: ${(props) => props.theme.hoverColor};
   }
   &:focus {
     outline: none;
-    color: ${(props) => (props.theme === 'light' ? '#00ADB5' : '#F7A91A')};
+    color: ${(props) => props.theme.hoverColor};
   }
 
   &{AccordionMessage} {
-    color: ${(props) => (props.theme === 'light' ? '#393E46' : '#c8c8c8')};
+    color: ${(props) => !props.theme.shadowColor};
 
   }
 `;
 
 const AccordionItem = ({ qna, onHeaderClick }) => {
-  const ThemeMode = useTheme();
-
   return (
     <AccordionWrapper>
       <AccordionHeader
@@ -66,7 +63,6 @@ const AccordionItem = ({ qna, onHeaderClick }) => {
         onClick={() => {
           onHeaderClick(qna);
         }}
-        theme={ThemeMode[0]}
       >
         <AccordionHeading>{qna.question}</AccordionHeading>
         <AiFillCaretDown className='icon' />

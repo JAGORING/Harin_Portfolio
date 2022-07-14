@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import { AiOutlineRight, AiOutlineArrowDown } from 'react-icons/ai';
 
 const BtnContainer = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +15,7 @@ const FullButton = styled.button`
   min-width: 16em;
   min-height: 4.5em;
   border-radius: 4.5em;
-  color: ${(props) => (props.theme === 'light' ? '#222831' : '#EEEEEE')};
+  color: ${(props) => props.theme.textColor};
   font-weight: bold;
   background: transparent;
   overflow: hidden;
@@ -37,7 +35,7 @@ const FullButton = styled.button`
     border-radius: 4.5em;
     z-index: 1;
     transition: transform 0.5s ease;
-    background: ${(props) => (props.theme === 'light' ? '#66BFBF' : '#F7A91A')};
+    background: ${(props) => props.theme.BaseColor};
   }
 
   &:hover {
@@ -94,10 +92,10 @@ const Text = styled.span`
   z-index: 2;
 `;
 
-const MoreButton = ({ onClick, children, theme }) => {
+const MoreButton = ({ onClick, children }) => {
   return (
     <BtnContainer>
-      <FullButton theme={theme} onClick={onClick}>
+      <FullButton onClick={onClick}>
         <Text>{children}</Text>
         <IconContainer>
           <Icon1>

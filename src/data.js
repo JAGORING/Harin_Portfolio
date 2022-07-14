@@ -1,26 +1,25 @@
-export const ListItems = [
-  { to: '/about/info', label: '자기소개' },
+export const AboutItems = [
+  { to: '/about/info', label: 'ABOUT ME' },
   { to: '/about/skills', label: 'SKILLS' },
   { to: '/about/QnA', label: 'Q&A' },
 ];
 
 export const point = [
   {
-    title: 'Fast',
-    content: 'Fast load times and lag free interaction, my highest priority.',
+    title: '속도',
+    content: '하나의 사이트가 ',
   },
   {
-    title: 'Responsive',
-    content: 'My layouts will work on any device, big or small.',
+    title: '우선순위',
+    content: '약속된 시간 내에 완성하기 위해 ',
   },
   {
-    title: 'Intuitive',
-    content: 'Strong preference for easy to use, intuitive UX/UI.',
+    title: '동료',
+    content: '혼자가 아닌 동료와 소통하고 더 좋은 방향으로 함께 나아가기',
   },
   {
-    title: 'Dynamic',
-    content:
-      'Websites do nat have to be static, I love making pages come to life.',
+    title: '성장',
+    content: '스스로 문제를 정의하고 해결하는 과정',
   },
 ];
 
@@ -40,23 +39,24 @@ export const skillContents = [
     contents: [
       'ES6+ 문법에 익숙합니다.',
       'webpack, parcel 등의 번들러 사용 경험이 있습니다.',
-      'typescript를 사용할 수 있습니다.',
       '동적 디자인에 대한 이해도가 높습니다.',
       'axios, fetch을 사용한 통신 경험이 있습니다.',
+      'Vanila JavaScript로 화면을 제어하고 기능을 구현할 수 있습니다.',
     ],
   },
 
   {
     title: 'HTML/CSS',
     contents: [
-      '웹표준을 지키려 노력합니다.',
-      'SCSS 문법에 익숙합니다.',
-      'BEM 방법론을 적용할 수 있습니다.',
+      '구조에 따라 적절한 시멘틱 태그를 선택하여 사용 할 수 있습니다.',
       '크로스 브라우징에 대응할 수 있습니다.',
+      'BEM 방법론을 적용할 수 있습니다.',
       'Antd, Material-UI, Bootstrap등의 css 라이브러리를 사용할 수 있습니다.',
       'keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.',
+      'CSS3 속성을 이해하고 시안에 따라 적절한 레이아웃을 구현할 수 있습니다',
     ],
   },
+
   {
     title: 'React',
     contents: [
@@ -64,7 +64,6 @@ export const skillContents = [
       'next.js를 활용한 SSR 개발 경험이 있습니다.',
     ],
   },
-
   {
     title: 'Git/GitHub',
     contents: ['branch를 사용하여 분기점을 만들 수 있습니다.'],

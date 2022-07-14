@@ -5,7 +5,18 @@
   position: relative;
 }
 
-main > section:nth-child(n + 2) {
+main > section:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > section:nth-child(2n) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main > section:nth-child(3) {
   padding-top: 6rem;
 }
 

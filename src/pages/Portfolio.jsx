@@ -5,7 +5,6 @@ import { useTheme } from '../context/themeProvider';
 
 import Header from '../components/Layout/Header';
 import ThemeToggle from '../components/Button/ThemeToggle';
-
 import Top from './Top';
 import About from './About';
 import Project from './Project';
@@ -78,16 +77,16 @@ const Portfolio = () => {
       </ThemeToggle>
       <Main theme={ThemeMode}>
         <section ref={(el) => (tabRefs.current[3] = el)}>
-          <Top onScroll={scrollHandler} theme={ThemeMode} />
+          <Top onScroll={scrollHandler} />
         </section>
         <section ref={(el) => (tabRefs.current[0] = el)}>
-          <About theme={ThemeMode} />
+          <About />
         </section>
         <section ref={(el) => (tabRefs.current[1] = el)}>
           <Project theme={ThemeMode} />
         </section>
         <section ref={(el) => (tabRefs.current[2] = el)}>
-          <Contact theme={ThemeMode} />
+          <Contact />
         </section>
       </Main>
     </>

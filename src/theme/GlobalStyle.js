@@ -5,5 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.bgColor} ;
     color: ${({ theme }) => theme.textColor} ;
     overflow-x: hidden;
+    transition: background ease 0.2s;
 	}
   `;
