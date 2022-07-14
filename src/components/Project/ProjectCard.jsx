@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../theme/media';
 
 import { SiNotion, SiGithub } from 'react-icons/si';
 
@@ -28,20 +29,32 @@ const CardBody = styled.div`
     margin-top: -0.2em;
     letter-spacing: 0.03em;
     font-size: 1.3em;
+    ${media.small`
+    font-size: 1.1rem;
+    `};
   }
   h5 {
     font-weight: bold;
     font-size: 0.7em;
     letter-spacing: 0.04em;
-    margin: 1.4em 0 0 0;
+    margin: 1.4em 0 0.8em;
     text-transform: uppercase;
+    ${media.medium`
+      margin: 0.6rem 0;
+    `};
   }
   p {
     color: ${(props) => !props.theme.shadowColor};
+    ${media.small`
+      font-size: 0.8rem;
+  `};
   }
   .icon {
     font-size: 1.6rem;
     color: ${(props) => props.theme.textColor};
+    ${media.small`
+    font-size: 1.3rem;
+`};
   }
 `;
 const BtnGroup = styled.div`

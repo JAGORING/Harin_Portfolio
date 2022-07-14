@@ -27,11 +27,11 @@ export const skills = [
   { good: true, label: 'HTML/CSS' },
   { good: true, label: 'JavaScript' },
   { good: true, label: 'React' },
-  { good: false, label: 'styled-components' },
+  { good: false, label: 'Firebase' },
   { good: true, label: 'Git/GitHub' },
   { good: false, label: 'BootStrap' },
+  { good: false, label: 'styled-components' },
   { good: false, label: 'MongoDB' },
-  { good: false, label: 'Firebase' },
 ];
 export const skillContents = [
   {
@@ -49,7 +49,6 @@ export const skillContents = [
     title: 'HTML/CSS',
     contents: [
       '구조에 따라 적절한 시멘틱 태그를 선택하여 사용 할 수 있습니다.',
-      '크로스 브라우징에 대응할 수 있습니다.',
       'BEM 방법론을 적용할 수 있습니다.',
       'Antd, Material-UI, Bootstrap등의 css 라이브러리를 사용할 수 있습니다.',
       'keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.',
@@ -66,7 +65,10 @@ export const skillContents = [
   },
   {
     title: 'Git/GitHub',
-    contents: ['branch를 사용하여 분기점을 만들 수 있습니다.'],
+    contents: [
+      'branch를 사용하여 분기점을 만들 수 있습니다.',
+      'pull-request를 이용하여 코드리뷰를 주고받은 경험이 있습니다.',
+    ],
   },
 ];
 

@@ -1,22 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../theme/media';
 
-import Email from '../components/Email';
-import LinkItems from '../components/LinkItems';
+import Email from '../components/Contact/Email';
+import EndText from '../components/Contact/EndText';
+import LinkItems from '../components/Contact/LinkItems';
 
 const ContactRin = styled.div`
-  padding: 0 20%;
+  padding: 0 13%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(1fr, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  ${media.medium`
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0 20%;
+
+`};
+  ${media.small`
+padding: 0;
+
+`};
 `;
 
-const EmailContainer = styled.div``;
-const LinkContainer = styled.div`
-  margin-left: 1rem;
-  width: 40rem;
+const EmailContainer = styled.div`
+  grid-row: 1 / 3;
+  ${media.small`
+  padding: 2rem;
+  
+  `};
 `;
+const LinkContainer = styled.div``;
 
 const Contact = () => {
   return (
@@ -25,15 +40,8 @@ const Contact = () => {
         <EmailContainer>
           <Email />
         </EmailContainer>
+        <EndText />
         <LinkContainer>
-          <p>
-            개발자로서의 성장을 멈추지 않고, "왜?" 라는 질문으로 성장의 원동력을
-            가지겠습니다.
-            <br />
-            다양한 문제와 오류 상황에 적절하게 대처하고 해결하는, 함께 일하는
-            동료가 신뢰할 수 있는 <span>이하린</span>이 되겠습니다!
-          </p>
-
           <LinkItems />
         </LinkContainer>
       </ContactRin>

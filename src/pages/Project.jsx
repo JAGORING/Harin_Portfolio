@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
+import media from '../theme/media';
 
 import { projectItems } from '../data';
 import ProjectCard from '../components/Project/ProjectCard';
@@ -11,7 +12,9 @@ const ProjectRin = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
+  ${media.small`
+  margin: auto 0;
+`};
   .rec-dot_active {
     background-color: ${(props) => props.color};
     box-shadow: 0 0 1px 3px ${(props) => props.color};
@@ -40,9 +43,9 @@ const ProjectRin = styled.div`
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 1 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 3 },
+  { width: 700, itemsToShow: 1, itemsToScroll: 1 },
+  { width: 800, itemsToShow: 2 },
+  { width: 1000, itemsToShow: 3 },
 ];
 
 const Project = ({ theme }) => {

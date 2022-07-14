@@ -1,6 +1,6 @@
 import React from 'react';
 import { skills, skillContents } from '../data';
-
+import media from '../theme/media';
 import styled from 'styled-components';
 import BackToAbout from '../components/Button/BackToAbout';
 import SkillItem from '../components/Skill/SkillItem';
@@ -11,22 +11,36 @@ const Wrap = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-
   h1 {
-    margin: 0.2em 0;
+    margin: 0 0 0.4em;
     font-size: 2em;
   }
   .list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(8, 1fr);
+    place-items: center;
+    margin-bottom: 1.2rem;
+    ${media.medium`
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  `};
+    ${media.small`
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  `};
   }
 `;
 
 const SkillContents = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
+${media.small`
+margin-top: 2rem;
+grid-template-columns: repeat(1, 1fr);
+`};
+}
 `;
 
 const Skills = () => {

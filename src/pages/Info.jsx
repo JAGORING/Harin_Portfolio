@@ -5,11 +5,15 @@ import styled from 'styled-components';
 import BackToAbout from '../components/Button/BackToAbout';
 import CircleImg from '../components/UI/CircleImg';
 import RinImg from '../images/Harin2.jpg';
+import media from '../theme/media';
 
 const Wrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${media.small`
+    flex-direction: column;
+`};
 `;
 const InfoBox = styled.div`
   margin-left: 6em;
@@ -21,6 +25,15 @@ const InfoBox = styled.div`
     color: ${(props) => props.theme.textColor};
     text-decoration: none;
   }
+
+  ${media.medium`
+  margin-left: 2rem;
+  padding: 2.5em 3.2em;
+  `};
+  ${media.small`
+  margin: 2rem 0 0;
+  padding: 2em 2.3em;
+  `};
 `;
 const InfoUl = styled.ul`
   width: 100%;
@@ -42,6 +55,13 @@ const InfoMe = styled.div`
   margin: 2em auto;
   display: flex;
   flex-direction: column;
+  ${media.medium`
+  width: 70%;
+
+  `};
+  ${media.small`
+  width: 85%;
+  `};
 `;
 const Info = () => {
   return (

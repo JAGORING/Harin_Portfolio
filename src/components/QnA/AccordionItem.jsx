@@ -27,7 +27,7 @@ const AccordionHeader = styled.button`
   background: none;
   padding: 0;
   margin: 0;
-
+  text-align: start;
   width: 100%;
   display: flex;
   justify-content: space-between;

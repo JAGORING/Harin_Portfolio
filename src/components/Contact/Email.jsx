@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled, { css } from 'styled-components';
 import emailjs from '@emailjs/browser';
-import { useTheme } from '../context/themeProvider';
+import { useTheme } from '../../context/themeProvider';
 
 const NAME = process.env.REACT_APP_EMAIL_NAME;
 const TEMPLATE = process.env.REACT_APP_EMAIL_TEMPLATE;

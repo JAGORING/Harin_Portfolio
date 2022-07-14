@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../theme/media';
 
 const SkillBox = styled.div`
   width: 100%;
@@ -7,6 +8,20 @@ const SkillBox = styled.div`
   border-radius: 2rem;
   margin: 1.6rem 2rem 0;
   position: relative;
+  ${media.medium`
+  margin: 1.2rem 0 1.2rem;
+  padding: 1.4rem 0.5rem;
+  :nth-child(2n) {
+    margin-left: 1.2rem;
+  }
+  `};
+  ${media.small`
+  margin: 0 0 1.2rem;
+  padding: 1.2rem 0.3rem;
+  :nth-child(2n) {
+    margin-left: 0;
+  }
+  `};
   .name {
     transform: rotate(-5deg);
     position: absolute;

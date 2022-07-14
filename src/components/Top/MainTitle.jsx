@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import media from '../../theme/media';
 
 const show = keyframes`
 0% {margin-top:-270px;}
@@ -17,6 +18,10 @@ const MainText = styled.div`
   font-size: 2.5em;
   font-weight: bold;
   display: block;
+  ${media.small`
+  font-size: 2em;
+
+  `};
 `;
 
 const Flip = styled.div`

@@ -1,14 +1,19 @@
 import AccordionItem from './AccordionItem';
 import styled from 'styled-components';
+import media from '../../theme/media';
 
 const FaqContainer = styled.div`
   width: 80%;
   margin: 0 auto;
+  text-align: start;
   h1 {
     margin: 0.2em 0;
     font-size: 2em;
   }
   padding-left: 1rem;
+  ${media.small`
+    width: 90%;
+  `};
 `;
 
 const AccordionsContainer = styled.div`

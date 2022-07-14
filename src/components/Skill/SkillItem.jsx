@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import media from '../../theme/media';
 
 const SkillBox = styled.li`
   background-color: ${(props) =>
@@ -9,6 +10,10 @@ const SkillBox = styled.li`
   margin: 0 0.8em 0.2em 0;
   border-radius: 8px;
   font-size: 1.1em;
+
+  ${media.medium`
+    font-size: 0.9rem;
+  `};
 `;
 
 const SkillItem = ({ children, good }) => {

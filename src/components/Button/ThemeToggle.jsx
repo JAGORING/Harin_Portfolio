@@ -24,11 +24,9 @@ const ToggleWrapper = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 96px;
+  width: 80px;
   height: 48px;
   border-radius: 30px;
-  box-shadow: ${(props) =>
-    props.mode === 'dark'
-      ? '0px 5px 10px rgba(40, 40, 40, 1), 0px 2px 4px rgba(40, 40, 40, 1)'
-      : '0 5px 10px rgba(100, 100, 100, 0.15), 0 2px 4px rgba(100, 100, 100, 0.15)'};
+  box-shadow: 0px 2px 8px ${(props) => props.theme.shadowColor},
+    0px 1px 4px ${(props) => props.theme.shadowColor};
 `;

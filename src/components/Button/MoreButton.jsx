@@ -12,11 +12,12 @@ const BtnContainer = styled.div`
 const FullButton = styled.button`
   border: 0;
   position: relative;
-  min-width: 16em;
-  min-height: 4.5em;
+  min-width: 15em;
+  min-height: 4.3em;
   border-radius: 4.5em;
   color: ${(props) => props.theme.textColor};
   font-weight: bold;
+  font-size: 1em;
   background: transparent;
   overflow: hidden;
   cursor: pointer;
@@ -24,7 +25,6 @@ const FullButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 0 3rem;
-
   &::after {
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@ const FullButton = styled.button`
 
   &:hover {
     &:after {
-      transform: translateX(65%);
+      transform: translateX(70%);
     }
   }
 `;
