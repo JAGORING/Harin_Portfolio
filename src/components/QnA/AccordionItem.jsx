@@ -51,7 +51,6 @@ const AccordionHeader = styled.button`
 
   &{AccordionMessage} {
     color: ${(props) => !props.theme.shadowColor};
-
   }
 `;
 

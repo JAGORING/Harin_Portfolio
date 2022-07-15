@@ -48,9 +48,9 @@ const Accordion = ({ qnas }) => {
     <FaqContainer>
       <h1>QnA</h1>
       <AccordionsContainer>
-        {qnas.map((item, index) => (
+        {qnas.map((item) => (
           <AccordionItem
-            key={index}
+            key={item.id}
             qna={item}
             onHeaderClick={handleHeaderClick}
           />

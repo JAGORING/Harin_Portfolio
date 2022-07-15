@@ -66,8 +66,9 @@ export const skillContents = [
   {
     title: 'React',
     contents: [
-      'redux 상태관리 라이브러리 사용 경험이 있습니다.',
-      'next.js를 활용한 SSR 개발 경험이 있습니다.',
+      '컴포넌트를 이용해서 재사용 가능하게 구현할 수 있습니다.',
+      'JSX 문법을 이용해서 간결하고 알아보기 쉬운 코드를 짤 수 있습니다.',
+      'SPA를 구현하기 위해 react-router-dom을 사용할 수 있습니다.',
     ],
   },
   {
@@ -81,23 +82,28 @@ export const skillContents = [
 
 export const questionsAnswers = [
   {
+    id: 'q1',
     question: '자신에 대해 자유롭게 표현한다면?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
+    id: 'q2',
     question: '프론트엔드에 흥미를 가지게 된 계기가 있나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
+    id: 'q3',
     question:
       '프론트엔드 개발의 기술을 향상시키기 위한 본인의 학습 방법에 대해서 얘기해주세요!',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
+    id: 'q4',
     question: '개발에 있어서 제일 중요하다고 생각하는 점이 있나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
   {
+    id: 'q5',
     question: '어떤 개발자가 되고 싶나요?',
     answer: '이러쿵 저러쿵 저러쿵 이러쿵',
   },
