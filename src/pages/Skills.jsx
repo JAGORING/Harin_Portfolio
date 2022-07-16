@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { skills, skillContents } from '../data';
 import media from '../theme/media';
 import styled from 'styled-components';
@@ -44,6 +44,10 @@ grid-template-columns: repeat(1, 1fr);
 `;
 
 const Skills = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <BackToAbout />
