@@ -14,22 +14,17 @@ const ContactRin = styled.div`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 4rem;
   ${media.medium`
-  grid-template-columns: repeat(1, 1fr);
-  padding: 0 20%;
-
-`};
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 20%;
+    height: 100%;
+  `};
   ${media.small`
-padding: 0;
-
-`};
+    padding: 0;
+  `};
 `;
 
 const EmailContainer = styled.div`
   grid-row: 1 / 3;
-  ${media.small`
-  padding: 2rem;
-  
-  `};
 `;
 const LinkContainer = styled.div``;
 

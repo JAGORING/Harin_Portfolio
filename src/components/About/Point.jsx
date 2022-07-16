@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import media from '../theme/media';
+import media from '../../theme/media';
 
 const PointBox = styled.div`
   width: 100%;

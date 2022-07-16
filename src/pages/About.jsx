@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { point, AboutItems } from '../data';
 import media from '../theme/media';
 import CircleImg from '../components/UI/CircleImg';
-import AboutList from '../components/AboutList';
-import Point from '../components/Point';
+import AboutList from '../components/About/AboutList';
+import Point from '../components/About/Point';
 import RinImg from '../images/Harin.jpg';
 
 const AboutRin = styled.div`

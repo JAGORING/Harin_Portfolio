@@ -7,13 +7,12 @@ import { projectItems } from '../data';
 import ProjectCard from '../components/Project/ProjectCard';
 
 const ProjectRin = styled.div`
-  margin: auto 5rem;
+  height: 100%;
+  margin: -3rem 5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
   ${media.small`
-  margin: auto 0;
+  margin: -3rem 0.5rem;
 `};
   .rec-dot_active {
     background-color: ${(props) => props.color};

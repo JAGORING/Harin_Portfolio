@@ -1,6 +1,9 @@
 import { TbListDetails, TbGrowth, TbSettings } from 'react-icons/tb';
 import { FaUserFriends } from 'react-icons/fa';
-import project_portfolio from './images/project_port_img.jpg';
+import project_portfolio from './images/project_port.jpg';
+import project_rintube from './images/project_rintube.png';
+import project_carrot from './images/project_carrot.png';
+import project_game from './images/project_game.jpg';
 
 export const AboutItems = [
   { to: '/about/info', label: 'ABOUT ME' },
@@ -113,17 +116,25 @@ export const questionsAnswers = [
 export const projectItems = [
   {
     id: 'p1',
-    img: 'https://picsum.photos/id/54/400/300',
-    title: '첫번째 프로젝트',
-    language: 'React',
-    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+    img: project_carrot,
+    title: '당근 게임',
+    language: 'HTML/CSS, JavaScript',
+    content:
+      'DreamCoding의 브라우저101 강의를 참고해서 만든 게임 프로젝트입니다.곤충을 피해서 모든 당근을 클릭해서 모두 없애는 방식으로 진행됩니다.',
+    git: 'https://github.com/Leeharin115/carrotGame',
+    notion:
+      'https://sunrise-soursop-181.notion.site/Carrot-Game-f990d756854e4a9aaa2adfe9e92e23c6',
   },
   {
     id: 'p2',
-    img: 'https://picsum.photos/id/54/400/300',
-    title: '두번째 프로젝트',
-    language: 'HTML/CSS, JavaScript',
-    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+    img: project_rintube,
+    title: 'RinTube',
+    language: 'React',
+    content:
+      'Youtube API를 사용하여 만들어본 페이지입니다. 인기있는 영상 목록을 불러와 렌더링하는 Main 페이지와 영상을 재생할 수 있는 Video 페이지로 구성되어 있습니다.',
+    git: 'https://github.com/Leeharin115/Rintube',
+    notion:
+      'https://sunrise-soursop-181.notion.site/RinTube-f107762086054085b2ae3abbd5729230',
   },
   {
     id: 'p3',
@@ -138,16 +149,23 @@ export const projectItems = [
   },
   {
     id: 'p4',
-    img: 'https://picsum.photos/id/54/400/300',
-    title: '네번째 프로젝트',
-    language: 'React',
-    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+    img: project_game,
+    title: 'Acade Game Machine',
+    language: 'HTML/CSS, JavaScript',
+    content:
+      '상단의 게임팩을 누르면 기계의 화면에서 게임을 할 수 있는 프로젝트입니다. 상단의 게임팩 중 2, 3번째의 공룡 게임과 블록깨기 게임을 담당했습니다.',
+    git: 'https://github.com/acadeGame/arcadeGame',
+    notion:
+      'https://sunrise-soursop-181.notion.site/Game-Machine-63be776a6bbe4eff8a9cbac194605479',
   },
   {
     id: 'p5',
     img: 'https://picsum.photos/id/54/400/300',
-    title: '다섯번째 프로젝트',
+    title: 'Bulletin Board',
     language: 'React',
     content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+    git: 'https://github.com/Leeharin115/Bulletin-Board',
+    notion:
+      'https://sunrise-soursop-181.notion.site/Bulletin-Board-a938ece0bb21470da6a112e9432994dc',
   },
 ];

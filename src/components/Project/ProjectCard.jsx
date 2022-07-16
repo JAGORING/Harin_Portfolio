@@ -8,7 +8,7 @@ const Card = styled.div`
   background: ${(props) => props.theme.bgColor};
   box-shadow: ${(props) => props.theme.shadowColor} 0px 5px 20px 0px;
   width: 20rem;
-  height: 25rem;
+  height: 26rem;
   border-radius: 0.6em;
   margin-bottom: 1em;
   overflow: hidden;
@@ -21,7 +21,6 @@ const Card = styled.div`
   img {
     width: 100%;
     height: 12rem;
-    object-fit: cover;
   }
 `;
 const CardBody = styled.div`
@@ -54,7 +53,7 @@ const CardBody = styled.div`
 `;
 const BtnGroup = styled.div`
   float: right;
-  margin: 0.3rem 0 0.6rem;
+  margin: 0.5rem 0 0.6rem;
   position: absolute;
   bottom: 0%;
   right: 3%;
@@ -77,7 +76,7 @@ const BtnGroup = styled.div`
     color: ${(props) => props.theme.textColor};
     ${media.small`
     font-size: 1.3rem;
-`};
+  `};
   }
 `;
 

@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import media from '../../theme/media';
 const Text = styled.div`
   margin-top: 5rem;
+  ${media.medium`
+    margin-top: 2rem;
+  `};
   ${media.small`
-  margin-top: 2rem;
-  padding: 0 1.5rem;
-  font-size: 0.7rem;
-
-`};
+    padding: 0 1.5rem;
+    font-size: 0.7rem;
+  `};
   div:nth-child(1),
   div:nth-child(2) {
     font-weight: bold;
@@ -21,8 +22,8 @@ const Text = styled.div`
   div:nth-child(2) {
     margin-bottom: 2rem;
     ${media.small`
-    margin-bottom: 0.6rem;
-  `};
+      margin-bottom: 0.6rem;
+    `};
   }
 `;
 const EndText = () => {
