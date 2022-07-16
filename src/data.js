@@ -1,5 +1,6 @@
 import { TbListDetails, TbGrowth, TbSettings } from 'react-icons/tb';
 import { FaUserFriends } from 'react-icons/fa';
+import project_portfolio from './images/project_port_img.jpg';
 
 export const AboutItems = [
   { to: '/about/info', label: 'ABOUT ME' },
@@ -126,10 +127,14 @@ export const projectItems = [
   },
   {
     id: 'p3',
-    img: 'https://picsum.photos/id/54/400/300',
-    title: '세번째 프로젝트',
+    img: project_portfolio,
+    title: '포트폴리오',
     language: 'React',
-    content: '이렇게 저렇게 만들어 본 요런 프로젝트',
+    content:
+      '현재 보여지는 페이지로 React Router, Context API, styled-components를 사용하여 구현했습니다.',
+    git: 'https://github.com/Leeharin115/Harin_Portfolio',
+    notion:
+      'https://sunrise-soursop-181.notion.site/Portfolio-ba39f81798264640a8f6a3b9b0990b42',
   },
   {
     id: 'p4',

@@ -19,7 +19,7 @@ const MainText = styled.div`
   font-weight: bold;
   display: block;
   ${media.small`
-  font-size: 2em;
+  font-size: 1.8em;
 
   `};
 `;
@@ -27,12 +27,21 @@ const MainText = styled.div`
 const Flip = styled.div`
   height: 60px;
   overflow: hidden;
+  ${media.small`
+  height: 55px;
+  
+  `};
   & > div > div {
     color: #fff;
-    padding: 0.09em 0.7em;
-    height: 60px;
-    margin-bottom: 43px;
+    padding: 0.1em 0.6em;
+    height: 63px;
+    margin-bottom: 41px;
     display: inline-block;
+    ${media.small`
+    padding: 0.2em 0.5em;
+    height: 55px;
+    margin-bottom: 1.78em;
+    `};
   }
   div:first-child {
     animation: ${show} 5s linear infinite;
