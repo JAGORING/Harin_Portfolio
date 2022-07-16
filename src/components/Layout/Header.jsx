@@ -36,7 +36,7 @@ const HeaderContainer = styled.header`
     .x__menu > div {
       width: 25px;
       height: 3px;
-      background-color: black;
+      background-color: ${(props) => props.theme.textColor};
       margin: 5px;
       transition: all 0.3s ease;
     }
@@ -54,15 +54,16 @@ const HeaderContainer = styled.header`
     }
   
     .menu__box__visible {
-      height: 28%;
+      height: 10rem;
       position: fixed;
       left: 0;
-      top: 1.5rem;
+      top: 3.3rem;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      
     }
   
     .menu__box__hidden {
