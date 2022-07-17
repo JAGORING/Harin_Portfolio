@@ -1,49 +1,39 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import media from '../../theme/media';
 
 const show = keyframes`
-0% {
-  margin-top: -270px;
-}
-5% {
-  margin-top: -180px;
-}
-33% {
-  margin-top: -180px;
-}
-38% {
-  margin-top: -90px;
-}
-66% {
-  margin-top: -90px;
-}
-71% {
-  margin-top: 0px;
-}
-99.99% {
-  margin-top: 0px;
-}
-100% {
-  margin-top: -270px;
+0% {margin-top:-270px;}
+5% {margin-top:-180px;}
+33% {margin-top:-180px;}
+38% {margin-top:-90px;}
+66% {margin-top:-90px;}
+71% {margin-top:0px;}
+99.99% {margin-top:0px;}
+100% {margin-top:-270px;}
 }
 `;
 const MainText = styled.div`
-  text-transform: uppercase;
-  font-size: 36px;
+  font-size: 35px;
   font-weight: bold;
   width: 100%;
-  bottom: 45%;
   display: block;
+  ${media.small`
+  font-size: 30px;
+
+
+  `};
 `;
 
 const Flip = styled.div`
-  height: 60px;
+  margin-top: 0;
+  height: 55px;
   overflow: hidden;
   & > div > div {
     color: #fff;
-    padding: 4px 12px;
+    padding: 3px 12px;
     height: 60px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     display: inline-block;
   }
   div:first-child {
