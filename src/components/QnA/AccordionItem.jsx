@@ -12,7 +12,7 @@ const AccordionHeading = styled.span`
   font-size: 1.1em;
 `;
 
-const AccordionMessage = styled.p`
+const AccordionMessage = styled.div`
   color: gray;
   line-height: 1.5;
   white-space: pre-line;
@@ -67,7 +67,9 @@ const AccordionItem = ({ qna, onHeaderClick }) => {
         <AiFillCaretDown className='icon' />
       </AccordionHeader>
       <AccordionMessage id={qna.id} className='answers'>
-        {qna.answer}
+        {qna.answers.map((answer, idx) => (
+          <div key={idx}>{answer}</div>
+        ))}
       </AccordionMessage>
     </AccordionWrapper>
   );

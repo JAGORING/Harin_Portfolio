@@ -52,17 +52,22 @@ const InfoUl = styled.ul`
 
 const InfoMe = styled.div`
   width: 60%;
-  margin: 2em auto;
+  margin: 4em auto;
   display: flex;
   flex-direction: column;
   ${media.medium`
-    width: 70%;
+    width: 75%;
   `};
   ${media.small`
-    width: 85%;
+  margin: 2em auto;
+    width: 80%;
   `};
   h3 {
     margin-bottom: 1.2rem;
+  }
+  p {
+    line-height: 1.7rem;
+    white-space: pre-line;
   }
 `;
 const Info = () => {
@@ -94,14 +99,26 @@ const Info = () => {
                 https://github.com/Leeharin115
               </a>
             </li>
+            <li>
+              <span>Notion</span>
+              <a href='https://sunrise-soursop-181.notion.site/HaRin-c0d9c2f9f3054e3b99bb910eb01327cf'>
+                이력서 사이트로 이동!
+              </a>
+            </li>
           </InfoUl>
         </InfoBox>
       </Wrap>
       <InfoMe>
-        <h3>꾸준히 성장을 위해 노력하는 개발자 이하린입니다🤗</h3>
+        <h3>성장을 위해 꾸준히 노력하는 개발자 이하린입니다🤗</h3>
         <p>
-          대학교 졸업 후 진로에 대한 고민을 하던 중 '내가 좋아하고 흥미를 가지는
-          일'을 하고 싶다는 생각이 들었습니다.
+          프론트엔드 신입 개발자로 HTML/CSS, JavaScript, React의 실력을 키워가고
+          있습니다. {'\n'}
+          스스로의 성장 가능성을 항상 열어두고, 해결해야할 문제가 있을 때
+          힘들어도 포기하지 않고 도전하는 개발자입니다. {'\n'}새로운 기술과
+          트랜드를 익히려 노력하고 있습니다. {'\n'}팀에 있어서 대화와 피드백으로
+          더 나은 방향으로 함께 갈 수 있는 동료가 되는 것을 목표로 하고
+          있습니다. {'\n'}프로젝트를 진행하면서 깨달은 점을 Notion에 기록하는
+          것을 습관화하고 있습니다.
         </p>
       </InfoMe>
     </section>
