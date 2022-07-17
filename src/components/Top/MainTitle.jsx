@@ -19,22 +19,23 @@ const MainText = styled.div`
   width: 100%;
   display: block;
   ${media.small`
-  font-size: 30px;
-
-
+    font-size: 30px;
   `};
 `;
 
 const Flip = styled.div`
   margin-top: 0;
-  height: 55px;
+  height: 60px;
   overflow: hidden;
   & > div > div {
     color: #fff;
-    padding: 3px 12px;
+    padding: 2px 12px;
     height: 60px;
     margin-bottom: 40px;
     display: inline-block;
+    ${media.small`
+      font-size: 30px;
+    `};
   }
   div:first-child {
     animation: ${show} 5s linear infinite;
