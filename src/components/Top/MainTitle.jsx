@@ -33,9 +33,9 @@ const Flip = styled.div`
     height: 60px;
     margin-bottom: 40px;
     display: inline-block;
-    ${media.small`
-      font-size: 30px;
-    `};
+    ${media.medium`
+      margin-bottom:35px;
+  `};
   }
   div:first-child {
     animation: ${show} 5s linear infinite;
