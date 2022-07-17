@@ -1,47 +1,50 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import media from '../../theme/media';
 
 const show = keyframes`
-0% {margin-top:-270px;}
-5% {margin-top:-180px;}
-33% {margin-top:-180px;}
-38% {margin-top:-90px;}
-66% {margin-top:-90px;}
-71% {margin-top:0px;}
-99.99% {margin-top:0px;}
-100% {margin-top:-270px;}
+0% {
+  margin-top: -270px;
+}
+5% {
+  margin-top: -180px;
+}
+33% {
+  margin-top: -180px;
+}
+38% {
+  margin-top: -90px;
+}
+66% {
+  margin-top: -90px;
+}
+71% {
+  margin-top: 0px;
+}
+99.99% {
+  margin-top: 0px;
+}
+100% {
+  margin-top: -270px;
 }
 `;
 const MainText = styled.div`
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 36px;
   font-weight: bold;
+  width: 100%;
+  bottom: 45%;
   display: block;
-  ${media.small`
-  font-size: 1.8em;
-
-  `};
 `;
 
 const Flip = styled.div`
   height: 60px;
   overflow: hidden;
-  ${media.small`
-  height: 55px;
-  
-  `};
   & > div > div {
     color: #fff;
-    padding: 0.1em 0.6em;
-    height: 63px;
-    margin-bottom: 41px;
+    padding: 4px 12px;
+    height: 60px;
+    margin-bottom: 45px;
     display: inline-block;
-    ${media.small`
-    padding: 0.2em 0.5em;
-    height: 55px;
-    margin-bottom: 1.78em;
-    `};
   }
   div:first-child {
     animation: ${show} 5s linear infinite;
