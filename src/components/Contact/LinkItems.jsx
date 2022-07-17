@@ -58,7 +58,7 @@ const LinkItems = () => {
           </a>
         </li>
         <li>
-          <a href='https://sunrise-soursop-181.notion.site/a53201019e064639bc0abeb11203e4d3'>
+          <a href='https://sunrise-soursop-181.notion.site/LeeHarin_Notion-90c9e1fcd63b4084a278c3337266d675'>
             <SiNotion />
           </a>
         </li>
