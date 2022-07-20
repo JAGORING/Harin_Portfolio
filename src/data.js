@@ -170,7 +170,7 @@ export const projectItems = [
       '현재 보여지는 페이지로 React Router, Context API, styled-components 등을 사용하여 구현했습니다.',
     git: 'https://github.com/Leeharin115/Harin_Portfolio',
     notion:
-      'https://sunrise-soursop-181.notion.site/Portfolio-ba39f81798264640a8f6a3b9b0990b42',
+      'https://sunrise-soursop-181.notion.site/Portfolio-94f008082d62415cb4f6ff48209bcee1',
   },
   {
     id: 'p4',
